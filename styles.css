@@ -41,10 +41,16 @@ p {
 
 a {
     color: lightblue;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+    display: inline-block;
 }
 
 a:hover {
-    color: White;
+    color: white;
+    transition: transform 0.3s ease, filter 0.3s ease;   /* Smooth animation */
+    filter: drop-shadow(0 0 20px #7600ff);             /* Red glow around it */
+    animation: glowPulse 5s infinite ease-in-out;        /* Pulsing glow effect */
+    transform: scale(1.1) rotate(3deg);
 }
 
 th {
@@ -55,6 +61,14 @@ th {
 .col-project { width: 50%; }
 .col-live    { width: 25%; }
 .col-github  { width: 25%; }
+.hover-tilt {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.hover-tilt:hover {
+  transform: scale(1.1) rotate(3deg);
+}
 
 
 /*IDs*/
@@ -91,10 +105,10 @@ th {
 #side-menu {
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 250px;
+    left: -100px;
+    width: 100px;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.75);
     transition: left 0.3s ease;
     z-index: 1000;
     padding-top: 60px;
