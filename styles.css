@@ -64,7 +64,6 @@ img { border-radius: 20px; }                             /* Applies rounded corn
 /* ===================================================================
    2. UTILITY CLASSES (MOBILE-FIRST)
    =================================================================== */
-
 /* Table column widths for project showcase */
 .col-project  { width: 50%; }   /* Sets project-name column to half the table width */
 .col-live     { width: 25%; }   /* Allocates one-quarter width for the live-demo column */
