@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Resume</title>
+<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,57 +63,77 @@
     <section id="schooling">
   <h2>Schooling & Work History</h2>
 
-  <table class="history-table">
-    <thead>
-      <!-- Institution names -->
-      <tr>
-        <th>Ozarks Technical Community College<br><span class="location">Springfield, MO</span></th>
-        <th>United States Army<br><span class="location">Fort Stewart, GA</span></th>
-        <th>Walmart<br><span class="location">2014–Present</span></th>
-      </tr>
-      <!-- Titles / Degrees -->
-      <tr>
-        <td>Associate of Science in Computer Science<br><em>(In Progress, Expected 2027)</em></td>
-        <td>13D AFATD Specialist, E4<br><em>(May 2011 – October 2014)</em></td>
-        <td>Multiple Roles</td>
-      </tr>
-    </thead>
-    <tbody>                       
-      <tr>
-        <!-- The three bullet lists — perfectly aligned -->
-        <td>
-          <ul>
-            <li>Primary focus on C# development, with additional coursework in HTML and CSS</li>
-            <li>Emphasis on responsive design and clarity in coding practices</li>
-            <li>Maintained a 4.0 GPA throughout current studies</li>
-            <li>Actively expanding knowledge of C# through independent study</li>
-            <li>Currently designing a companion program for ARK: Survival Evolved</li>
-          </ul>
-        </td>
-        <td>
-          <ul>
-            <li>Honorable Discharge</li>
-            <li>Developed discipline, teamwork, and problem-solving skills</li>
-            <li>Maintained composure under pressure and strengthened leadership abilities</li>
-          </ul>
-        </td>
-        <td>
-          <ul>
-            <li>Cashier</li>
-            <li>Frozen, Dairy, Meat and Produce Associate</li>
-            <li>Stocking 2 Associate</li>
-            <li>Automotive Sales Associate</li>
-            <li>Automotive ServiceWriter Writer</li>
-            <li>Automotive Service Technician</li>
-            <li>Automotive Service Manager</li>
-            <li>Automotive Team Lead</li>
-            <li>Stocking 2 Team Lead</li>
-            <li>Overnight Stocking Associate</li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="history-flex">
+
+    <!-- Column 1 -->
+    <div class="history-column">
+      <div class="history-header">
+      <h3>Ozarks Technical Community College</h3>
+      </div>
+      <div class ="history-location">
+        <h4 class="location">Springfield, MO</h4>
+        </div>
+        <div class="history-specific">
+      <p class="subtitle">Associate of Science in Computer Science<br>(In Progress, Expected 2027)</p>
+      </div>
+      <div class="history-details">
+      <ul>
+        <li>Primary focus on C# development, with additional coursework in HTML and CSS</li>
+        <li>Emphasis on responsive design and clarity in coding practices</li>
+        <li>Maintained a 4.0 GPA throughout current studies</li>
+        <li>Actively expanding knowledge of C# through independent study</li>
+        <li>Currently designing a companion program for ARK: Survival Evolved</li>
+      </ul>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="history-column">
+      <div class="history-header">
+      <h3>United States Army</h3>
+      </div>
+      <div class="history-location">
+      <h4 class="location">Fort Stewart, GA</h4>
+      </div>
+      <div class="history-specific">
+      <p class="subtitle">13D AFATD Specialist, E4<br>(May 2011 – October 2014)</p></div>
+      <div class="history-details">
+      <ul>
+        <li>Honorable Discharge</li>
+        <li>Developed discipline, teamwork, and problem-solving skills</li>
+        <li>Maintained composure under pressure and strengthened leadership abilities</li>
+      </ul>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="history-column">
+      <div class="history-header">
+      <h3>Walmart</h3>
+      </div>
+      <div class="history-location">
+      <h4 class="location">Multiple Store locations</h4>
+      </div>
+      <div class="history-specific">
+      <p class="subtitle">Multiple Roles<br>(2014–Present)</p>
+      </div>
+      <div class="history-details">
+      <ul>
+        <li>Cashier</li>
+        <li>Frozen, Dairy, Meat and Produce Associate</li>
+        <li>Stocking 2 Associate</li>
+        <li>Automotive Sales Associate</li>
+        <li>Automotive Service Writer</li>
+        <li>Automotive Service Technician</li>
+        <li>Automotive Service Manager</li>
+        <li>Automotive Team Lead</li>
+        <li>Stocking 2 Team Lead</li>
+        <li>Overnight Stocking Associate</li>
+      </ul>
+      </div>
+    </div>
+
+  </div>
 </section>
     
     <div id="github-contact-wrapper">

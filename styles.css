@@ -274,46 +274,78 @@ footer {
   border-top: 3px solid blueviolet;                       /* Purple accent line at top */
 }
 
-/* History table container styling */
-.history-table {
-  width: 100%;                                            /* Full table width */
-  border-collapse: separate;                              /* Allows spacing between rows */
-  border-spacing: 0 20px;                                 /* Adds vertical spacing between rows */
-  margin-top: 20px;                                       /* Space above the table */
+/* Flexbox container */
+.history-flex {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-/* Shared cell styling for table headers and data cells */
-.history-table th,
-.history-table td {
-  padding: 5px;                                           /* Internal cell padding */
-  vertical-align: top;                                    /* Aligns content to the top of each cell */
+/* Each column */
+.history-column {
+  flex: 1;
+  width: 80%;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
 }
 
-/* Header styling for history table */
-.history-table th {
-  font-size: 1.4rem;                                      /* Larger header text */
-  font-weight: bold;                                      /* Bold for emphasis */
+/* Column headers */
+.history-column h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-/* Location text inside table headers */
-.history-table th .location {
-  font-size: 1rem;                                        /* Smaller than main header text */
-  font-weight: normal;                                    /* Normal weight for secondary info */
-  display: block;                                         /* Forces location onto its own line */
+/* Location text */
+.history-column .location {
+  font-size: 1rem;
+  font-weight: normal;
+  opacity: 0.8;
 }
 
-/* Subtitle styling for table data cells */
-.history-table td.subtitle {
-  font-size: 1.1rem;                                      /* Slightly larger subtitle text */
-  font-style: italic;                                     /* Italicized for emphasis */
-  padding-bottom: 20px;                                   /* Extra spacing below subtitle */
+/* Subtitle (degree, job title, etc.) */
+.history-column .subtitle {
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-/* List styling inside table cells */
-.history-table .list-cell ul {
-  margin: 0;                                              /* Removes default list margin */
-  padding-left: 20px;                                     /* Indents list items */
-  text-align: left;                                       /* Left-aligns list text */
+/* Force all lists to start at the same horizontal position */
+.history-column ul {
+  margin: 0;
+  padding-left: 25px;   /* Controls bullet alignment */
+  list-style-position: outside;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.history-column ul li {
+  padding-left: 5px;
+  text-indent: -5px;
+}
+
+.history-header, 
+.history-location, 
+.history-specific {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history-details {
+  text-align: left;
 }
 
 /* ===================================================================
@@ -576,6 +608,26 @@ footer {
     padding: 15px;                                        /* Internal padding */
     /* (your existing border, background, etc. stays) */
   }
+
+  .history-flex {
+    flex-direction: row;                              /* Side-by-side columns on tablet */;
+  }
+
+  .history-header {
+    height: 100px;
+  }
+
+  .history-location {
+    height: 50px;
+  }
+
+  .history-specific {
+    height: 175px;
+  }
+
+  .history-details {
+    height: auto;
+  }
 }
 
 /* ===================================================================
@@ -664,6 +716,22 @@ footer {
     flex: 1;                    /* Each column grows evenly */
     max-width: 380px;           /* Prevents overly wide columns */
     min-width: 300px;           /* Ensures columns don’t shrink too small */
+  }
+
+  .history-header {
+    height: 75px;
+  }
+
+  .history-location {
+    height: 25px;
+  }
+
+  .history-specific {
+    height: 100px;
+  }
+
+  .history-details {
+    height: auto;
   }
 
   /* Footer */
